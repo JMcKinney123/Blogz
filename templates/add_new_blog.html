@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 style="text-align:center">Add a Blog Entry</h1>
+<h1>new post</h1>
 <form action="/newpost" method="post">
     
-            
-            <label for="title">Title for your new blog: </label></br>
-            <input type ="text" name="title" value='{{request.form['title']}}'>
+        <div cellspacing="0">
+            <label for="title"><p class="space" style="font-size:22px">title: </p></label>
+            <input type ="text" name="title" style="width:400px; height:28px" value='{{request.form['title']}}'>
             <span class="error">{{error}}</span>
-            </br>
-            </br>
-            </br>
-            <label for="body">Your new blog: </label></br>
-            <textarea value="{{request.form['body']}}" cols="25" rows="5" name="body"></textarea>
-            <span class="error">{{error_too}}</span>
-            <p><input type="submit" value="Add Entry"/></p>
             
+            <label for="body"><p class="space" style="font-size:22px">post: </p></label>
+            <textarea style="height:200px; width:400px" type="text" name="body">{{request.form['body']}}</textarea>
+            <span class="error">{{error_too}}</span>
+            <p><input style="width: 180px; height:36px; font-size:25px" type="submit" value="Submit Query"/></p>
+        </div>       
        
 </form>
 

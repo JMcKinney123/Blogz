@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Signup</h1>
+<body>
+<form action="/signup" method="post">
+    <table cellspacing="0">
+        <tr>
+            <td><label for="username"><p class="space" style="font-size:22px">Username</p></label></td>
+            <td>
+                <input style="width: 400px; height:25px;" name="username" type="username" value='{{request.form['username']}}'>
+                <span class="error">{{error_username}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password"><p class="space" style="font-size:22px">Password</p></label></td>
+            <td>
+                <input style="width: 400px; height:25px" name="password" type="password">
+                <span class="error">{{error_password}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="verify"><p class="space"style="font-size:22px">Verify Password</p></label></td>
+            <td>
+                <input style="width: 400px; height:25px" name="verify" type="password">
+                <span class="error">{{error_verify}}</span>
+            </td>
+        </tr>
+    </table>
+    <input style="width: 180px; height:38px; font-size:24px" type="submit" value="Submit Query">
+</form>
+</body>
+{% endblock %}

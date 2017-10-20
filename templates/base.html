@@ -6,16 +6,39 @@
             .error {
                 color: red;
             }
+            body {
+                margin-left:280px;
+                white-space: nowrap;
+                margin-bottom: 0px;
+                margin-top: 20px;
+                
+            }
+            .space {
+                margin: 0;
+                white-space: nowrap;
+                padding-top:0;
+            }
+            
+            body {
+                font-family:Helvetica;
+                font-size:18px;
+            }      
+            .small { 
+                font-size:10px;
+            }
+            
         </style>
     </head>
     <body>
         <nav>
-          <a href="/blog">Main Blog Page</a>
-        
-          <a href="/newpost" style='padding-left:20px'>Add a Blog Entry</a>
+          <a href="/">home</a>
+          <a href="/blog" style='padding-left:20px'>all posts</a>
+          <a href="/newpost" style='padding-left:20px'>new post</a>
+          <a href="/login" style='padding-left:470px'>login</a>
+          <a href="/logout" style='padding-left:20px'>logout</a>
         </nav>
         <h1>
-            <center>{{title}}</center>
+            <p>{{title}}</p>
         </h1>
 
     <!--{% with messages = get_flashed_messages(with_categories=True) %}
